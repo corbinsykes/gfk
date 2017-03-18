@@ -1,0 +1,45 @@
+@import '../styles/variables/variables';
+
+h1 {
+	color: $gray-7;
+}
+
+h3 {
+	font-family: 'Lora', serif;
+}
+
+h3 + h3 {
+	margin-top: 1rem;
+}
+
+.dropdown {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	border: 1px solid #C7C7C7;
+    width: 210px;
+    height: 40px;
+    padding: 0;
+    margin: 0 auto 40px auto;
+}
+
+.hero {
+	display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 37.5rem;
+    background: url(../assets/images/gfk.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    color: $white;
+    opacity: 0.75;
+}
+
+.ipsum {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: center;
+	padding: 0 5rem;
+	max-width: 37.5rem;
+}

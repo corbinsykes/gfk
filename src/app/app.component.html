@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div class="content u-flex">
+	<div class="hero"></div>
+
+	<div class="u-fillRemaining u-centerXY u-pullRight">
+		<div class="ipsum">
+			<div
+				class="dropdown"
+				dropdown>
+		        <a dropdown-open>{{selection}} Paragraphs</a>
+		        <ul class="dropdown-menu">
+		            <li *ngFor=" let button of [1,2,3,4,5]; let index = index"
+					(click)="buildParagraphs(index + 1)">
+						<span>{{index + 1}} Paragraphs</span>
+					</li>
+		        </ul>
+		    </div>
+
+			<h3
+				class="t-regular"
+				*ngFor="let paragraph of paragraphs">
+				{{paragraph}}
+			</h3>
+		</div>
+	</div>
+</div>

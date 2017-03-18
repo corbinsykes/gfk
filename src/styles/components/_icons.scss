@@ -1,0 +1,472 @@
+// [class*="icon-"] {
+// 	display: inline-block;
+// 	font-size: inherit;
+// 	color: $gray-7;
+// 	text-rendering: auto;
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// 	transition: color $transition-timing ease;
+
+// 	&.is-active {
+// 		color: $teal;
+// 	}
+// }
+
+// .icon-empty {
+// 	color: $gray-4;
+// }
+
+// .icon-warning {
+// 	color: $red;
+// }
+
+// .icon-warning--low {
+// 	color: $yellow;
+// }
+
+// .icon--white {
+// 	color: $white;
+// }
+
+// .icon--black {
+// 	color: $gray-10;
+// }
+
+// .icon--teal {
+// 	color: $teal;
+// }
+
+// .icon--hover {
+// 	cursor: pointer;
+
+// 	&:hover {
+// 		color: $gray-10;
+// 	}
+// }
+
+// .icon--hover--teal {
+// 	cursor: pointer;
+
+// 	&:hover {
+// 		color: $teal;
+// 	}
+// }
+
+// .icon-8 {
+// 	font: normal normal normal 8px/1 'Icons8';
+
+// 	&.icon-check:before {
+// 		content: "\e900";
+// 	}
+// }
+
+
+// .icon-12 {
+// 	font: normal normal normal 12px/1 'Icons12';
+
+// 	&.icon-add:before {
+// 		content: "\e900";
+// 	}
+
+// 	&.icon-arrow-down:before {
+// 		content: "\e901";
+// 	}
+
+// 	&.icon-arrow-left:before {
+// 		content: "\e902";
+// 	}
+
+// 	&.icon-arrow-right:before {
+// 		content: "\e903";
+// 	}
+
+// 	&.icon-arrow-up:before {
+// 		content: "\e904";
+// 	}
+
+// 	&.icon-check:before {
+// 		content: "\e905";
+// 	}
+
+// 	&.icon-close:before {
+// 		content: "\e906";
+// 	}
+
+// 	&.icon-pause:before {
+// 		content: "\e907";
+// 	}
+
+// 	&.icon-play:before {
+// 		content: "\e908";
+// 	}
+
+// 	&.icon-search:before {
+// 		content: "\e909";
+// 	}
+
+// 	&.icon-sound-off:before {
+// 		content: "\e90a";
+// 	}
+
+// 	&.icon-sound-on:before {
+// 		content: "\e90b";
+// 	}
+
+// 	&.icon-subtract:before {
+// 		content: "\e90c";
+// 	}
+// }
+
+// .icon-16 {
+// 	font: normal normal normal 16px/1 'Icons16';
+
+// 	&.icon-add:before {
+// 		content: "\e900";
+// 	}
+
+// 	&.icon-arrow-down:before {
+// 		content: "\e901";
+// 	}
+
+// 	&.icon-arrow-left:before {
+// 		content: "\e902";
+// 	}
+
+// 	&.icon-arrow-right:before {
+// 		content: "\e903";
+// 	}
+
+// 	&.icon-arrow-up:before {
+// 		content: "\e904";
+// 	}
+
+// 	&.icon-bold:before {
+// 		content: "\e905";
+// 	}
+
+// 	&.icon-check:before {
+// 		content: "\e906";
+// 	}
+
+// 	&.icon-close:before {
+// 		content: "\e907";
+// 	}
+
+// 	&.icon-info:before {
+// 		content: "\e908";
+// 	}
+
+// 	&.icon-italic:before {
+// 		content: "\e909";
+// 	}
+
+// 	&.icon-lock:before {
+// 		content: "\e90a";
+// 	}
+
+// 	&.icon-no-stroke:before {
+// 		content: "\e90b";
+// 	}
+
+// 	&.icon-search:before {
+// 		content: "\e90c";
+// 	}
+
+// 	&.icon-subtract:before {
+// 		content: "\e90d";
+// 	}
+
+// 	&.icon-success:before {
+// 		content: "\e90e";
+// 	}
+
+// 	&.icon-underline:before {
+// 		content: "\e90f";
+// 	}
+
+// 	&.icon-warning:before,
+// 	&.icon-warning--low:before {
+// 		content: "\e910";
+// 	}
+// }
+
+// .icon-20 {
+// 	font: normal normal normal 20px/1 'Icons20';
+
+// 	&.icon-arrow-down:before {
+// 		content: "\e900";
+// 	}
+
+// 	&.icon-arrow-left:before {
+// 		content: "\e901";
+// 	}
+
+// 	&.icon-arrow-right:before {
+// 		content: "\e902";
+// 	}
+
+// 	&.icon-arrow-up:before {
+// 		content: "\e903";
+// 	}
+
+// 	&.icon-calendar:before {
+// 		content: "\e904";
+// 	}
+
+// 	&.icon-close:before {
+// 		content: "\e905";
+// 	}
+
+// 	&.icon-copy:before {
+// 		content: "\e906";
+// 	}
+
+// 	&.icon-cta-url:before {
+// 		content: "\e907";
+// 	}
+
+// 	&.icon-flip-horizontal:before {
+// 		content: "\e908";
+// 	}
+
+// 	&.icon-flip-vertical:before {
+// 		content: "\e909";
+// 	}
+
+// 	&.icon-image:before {
+// 		content: "\e90a";
+// 	}
+
+// 	&.icon-redo:before {
+// 		content: "\e90b";
+// 	}
+
+// 	&.icon-retina-1x:before {
+// 		content: "\e90c";
+// 	}
+
+// 	&.icon-retina-2x:before {
+// 		content: "\e90d";
+// 	}
+
+// 	&.icon-retina-3x:before {
+// 		content: "\e90e";
+// 	}
+
+// 	&.icon-undo:before {
+// 		content: "\e90f";
+// 	}
+
+// 	&.icon-video:before {
+// 		content: "\e910";
+// 	}
+
+// 	&.icon-code:before {
+// 		content: "\e911";
+// 	}
+
+// 	&.icon-create:before {
+// 		content: "\e912";
+// 	}
+
+// 	&.icon-crop-horizontal:before {
+// 		content: "\e913";
+// 	}
+
+// 	&.icon-crop-vertical:before {
+// 		content: "\e914";
+// 	}
+
+// 	&.icon-edit:before {
+// 		content: "\e915";
+// 	}
+
+// 	&.icon-mute-bottom-left:before {
+// 		content: "\e916";
+// 	}
+
+// 	&.icon-mute-bottom-right:before {
+// 		content: "\e917";
+// 	}
+
+// 	&.icon-mute-top-left:before {
+// 		content: "\e918";
+// 	}
+
+// 	&.icon-mute-top-right:before {
+// 		content: "\e919";
+// 	}
+
+// 	&.icon-trash:before {
+// 		content: "\e91a";
+// 	}
+// }
+
+// .icon-24 {
+// 	font: normal normal normal 24px/1 'Icons24';
+
+// 	&.icon-account:before {
+// 		content: "\e900";
+// 	}
+
+// 	&.icon-arrow-down:before {
+// 		content: "\e901";
+// 	}
+
+// 	&.icon-arrow-left:before {
+// 		content: "\e902";
+// 	}
+
+// 	&.icon-arrow-right:before {
+// 		content: "\e903";
+// 	}
+
+// 	&.icon-arrow-up:before {
+// 		content: "\e904";
+// 	}
+
+// 	&.icon-brand-awareness:before {
+// 		content: "\e905";
+// 	}
+
+// 	&.icon-cart:before {
+// 		content: "\e906";
+// 	}
+
+// 	&.icon-center:before {
+// 		content: "\e907";
+// 	}
+
+// 	&.icon-check:before {
+// 		content: "\e908";
+// 	}
+
+// 	&.icon-click:before {
+// 		content: "\e909";
+// 	}
+
+// 	&.icon-close:before {
+// 		content: "\e90a";
+// 	}
+
+// 	&.icon-create:before {
+// 		content: "\e90b";
+// 	}
+
+// 	&.icon-details:before {
+// 		content: "\e90c";
+// 	}
+
+// 	&.icon-duplicate:before {
+// 		content: "\e90d";
+// 	}
+
+// 	&.icon-edit:before {
+// 		content: "\e90e";
+// 	}
+
+// 	&.icon-empty:before {
+// 		content: "\e90f";
+// 	}
+
+// 	&.icon-envelope:before {
+// 		content: "\e910";
+// 	}
+
+// 	&.icon-feedback:before {
+// 		content: "\e911";
+// 	}
+
+// 	&.icon-file:before {
+// 		content: "\e912";
+// 	}
+
+// 	&.icon-help:before {
+// 		content: "\e913";
+// 	}
+
+// 	&.icon-more:before {
+// 		content: "\e914";
+// 	}
+
+// 	&.icon-order:before {
+// 		content: "\e915";
+// 	}
+
+// 	&.icon-search:before {
+// 		content: "\e916";
+// 	}
+
+// 	&.icon-trash:before {
+// 		content: "\e917";
+// 	}
+
+// 	&.icon-video-views:before {
+// 		content: "\e918";
+// 	}
+// }
+
+// .icon-32 {
+// 	font: normal normal normal 32px/1 'Icons32';
+
+// 	&.icon-create:before {
+// 		content: "\e900";
+// 	}
+
+// 	&.icon-details:before {
+// 		content: "\e901";
+// 	}
+
+// 	&.icon-eye:before {
+// 		content: "\e902";
+// 	}
+
+// 	&.icon-order:before {
+// 		content: "\e903";
+// 	}
+
+// 	&.icon-rock-on:before {
+// 		content: "\e904";
+// 	}
+
+// 	&.icon-share:before {
+// 		content: "\e905";
+// 	}
+
+// 	&.icon-success:before {
+// 		content: "\e906";
+// 	}
+
+// 	&.icon-warning:before,
+// 	&.icon-warning--low:before {
+// 		content: "\e907";
+// 	}
+// }
+
+// .icon-48 {
+// 	font: normal normal normal 48px/1 'Icons48';
+
+// 	&.icon-arrow-down:before {
+// 		content: "\e900";
+// 	}
+
+// 	&.icon-arrow-left:before {
+// 		content: "\e901";
+// 	}
+
+// 	&.icon-arrow-right:before {
+// 		content: "\e902";
+// 	}
+
+// 	&.icon-arrow-up:before {
+// 		content: "\e903";
+// 	}
+
+// 	&.icon-empty:before {
+// 		content: "\e904";
+// 	}
+
+// 	&.icon-arrow-right--long:before {
+// 		content: "\e905";
+// 	}
+// }

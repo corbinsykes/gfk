@@ -1,0 +1,30 @@
+.tooltip {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 6rem;
+	color: $white;
+	padding: 0.75rem 1.25rem;
+	font-size: 0.8125rem;
+	text-align: center;
+	left: -2.375rem;
+	background-color: rgba($black, 0.7);
+	border-radius: 2px;
+	user-select: none;
+	pointer-events: none;
+	transform: translate3d(0, -0.5rem, 0);
+	opacity: 0;
+	transition:
+		opacity $transition-timing ease,
+		transform $transition-timing ease;
+	z-index: $level-2;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -0.3125rem;
+		left: 50%;
+		margin-left: -0.3125rem;
+		@include triangle(0.7rem, rgba($black, 0.7), down);
+	}
+}
