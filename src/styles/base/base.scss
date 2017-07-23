@@ -4,24 +4,6 @@
 @import '../variables/weights';
 
 @import 'reset';
-@import 'mixins';
 @import 'utility';
-@import 'grid';
-@import 'fonts';
-@import 'icons';
 @import 'text';
-
-@import '../components/button';
-@import '../components/checkbox';
-@import '../components/dropdown';
-@import '../components/error';
-@import '../components/icons';
-@import '../components/input';
-@import '../components/loader';
-@import '../components/modal';
-@import '../components/pill';
-@import '../components/radio';
-@import '../components/switch';
-@import '../components/table';
-@import '../components/tabs';
-@import '../components/tooltip';
+@import 'vfx';

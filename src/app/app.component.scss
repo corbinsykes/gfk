@@ -1,71 +1,113 @@
 @import '../styles/variables/variables';
 
-h3 {
+h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: $white;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
 	font-family: 'Lora', serif;
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
 
-h3 + h3 {
-	margin-top: 1rem;
-}
-
-.content {
-	padding: 2.5rem;
-}
-
-.dropdown {
-	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
-	border: 1px solid #C7C7C7;
-    width: 210px;
-    height: 40px;
-    padding: 0;
-    margin: 0 auto 40px auto;
-}
-
-.hero {
-	display: flex;
+.page {
+    display: flex;
     flex-direction: column;
-    position: fixed;
-    height: calc(100vh - 5rem);
-    width: 37.5rem;
-    background: url(../assets/images/gfk.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+}
+
+.hero,
+.ipsum {
+    display: flex;
+    flex: 1;
+    position: relative;
 }
 
 .overlay {
-	height: calc(100vh - 5rem);
-	width: 37.5rem;
-	position: fixed;
-	padding: 2.5rem;
-	background-color: rgba(0,0,0,0.4);
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $black-translucent--light;
 }
 
 .overlay-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100% - 4rem);
+    width: calc(100% - 4rem);
     border: 2px solid $white;
-
-	h1 {
-		font-size: 3rem;
-		line-height: 3.5rem;
-	    color: $white;
-	    font-family: 'Oswald', sans-serif;
-	}
 }
 
+
 .ipsum {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	justify-content: center;
-	padding: 0 5rem;
-	max-width: 37.5rem;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    &.open {
+        .dropdown-menu {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.dropdown-item,
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding: 0 0.75rem;
+}
+
+.dropdown-toggle {
+    justify-content: space-between;
+    border: 1px solid $gray-8;
+
+    &::after {
+        content: '';
+        height: 0;
+        width: 0;
+        border-width: 6px 4px 0 4px;
+        border-style: solid;
+        border-color: $gray-8 transparent transparent transparent;
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    border: 1px solid $gray-8   ;
+    border-top: 0;
+    background-color: $white;
+
+    &.open {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.paragraphs {
+    max-height: 45vh;
+    overflow-y: scroll;
+}
+
+.paragraph + .paragraph {
+    margin-top: 1rem;
 }
