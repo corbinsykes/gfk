@@ -2,9 +2,9 @@
 	<div class="hero">
 		<div class="overlay">
 			<div class="overlay-content">
-				<h1 class="t-caps">pretty</h1>
-				<h1 class="t-caps">toney</h1>
-				<h1 class="t-caps">ipsum</h1>
+				<h1>Pretty</h1>
+				<h1>Toney</h1>
+				<h1>Ipsum</h1>
 			</div>
 		</div>
 	</div>
@@ -23,14 +23,30 @@
 				<div
 					class="dropdown-toggle"
 					dropdown-open>
-			        <a>{{selection}} Verses</a>
+			        <a>
+			        	<span>{{selection}}</span>
+						<span>
+							{{  selection |
+									i18nPlural: {
+										'=1': 'verse',
+										'other': 'verses'
+									}  }}
+						</span>
+			        </a>
 				</div>
 		        <ul class="dropdown-menu">
 		            <li
 		            	class="dropdown-item"
 		            	*ngFor=" let button of [1,2,3,4,5]; let index = index"
 						(click)="buildParagraphs(index + 1)">
-						<span>{{index + 1}} Verses</span>
+						<span>{{index + 1}}&nbsp;</span>
+						<span>
+							{{  index + 1 |
+									i18nPlural: {
+										'=1': 'verse',
+										'other': 'verses'
+									}  }}
+						</span>
 					</li>
 		        </ul>
 		    </div>

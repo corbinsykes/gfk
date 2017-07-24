@@ -4,41 +4,48 @@ $screen-sm: 550px;
 $screen-md: 800px;
 $screen-lg: 1024px;
 
-h1,
 h2,
 h3,
 p {
-    color: $gray-9;
+    color: #1A1917;
 }
 
 h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: $white-translucent--dark;
     font-family: 'Playfair Display', serif;
     text-shadow: 0 0 2rem rgba(0, 0, 0, 0.9);
     font-weight: 800;
+    letter-spacing: 2px;
     transition: all $transition-timing ease;
 
     @media (min-width: $screen-sm) {
         font-size: 2.5rem;
         line-height: 2.5rem;
+        letter-spacing: 2.75px;
     }
 
     @media (min-width: $screen-md) {
         font-size: 4.25rem;
-        line-height: 5.25rem;
+        line-height: 4.5rem;
+        letter-spacing: 4.5px;
     }
 
     @media (min-width: $screen-lg) {
         font-size: 4.75rem;
-        line-height: 5.75rem;
+        line-height: 5rem;
+        letter-spacing: 5px;
     }
 }
 
 p {
-	font-family: 'Lora', serif;
-	font-size: 1.0625rem;
-	line-height: 1.625rem;
+    font-family: 'Lora', serif;
+    // font-size: 1.0625rem;
+    // line-height: 1.625rem;
+
+    // font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 26px;
 }
 
 .page {
@@ -58,9 +65,10 @@ p {
 }
 
 .hero {
-    background-image: url("https://preview.ibb.co/eU7Dh5/gfk.jpg");
+    // background-image: url("https://preview.ibb.co/eU7Dh5/gfk.jpg");
+    background-image: url("/assets/images/ghost3.jpg");
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 40% 50%;
     flex: 0.33;
 
     @media (min-width: $screen-sm) {
@@ -68,7 +76,8 @@ p {
     }
 
     @media (min-width: $screen-md) {
-        flex: 1;
+        flex: 0.4;
+        // max-width: 32.75rem;
     }
 }
 
@@ -85,36 +94,44 @@ p {
 .overlay-content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     height: calc(100% - 3rem);
     width: calc(100% - 3rem);
     border: 3px solid $white-translucent--dark;
 
+    h1 + h1 {
+        margin-left: 1.25rem;
+    }
+
     @media (min-width: $screen-md) {
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
         border-width: 6px;
         height: calc(100% - 4rem);
         width: calc(100% - 4rem);
+
+        h1 + h1 {
+            margin-left: 0;
+        }
     }
 }
 
 
 .ipsum {
+    justify-content: center;
     flex-direction: column;
     flex: 1;
     margin: 2rem;
-    border-bottom: 2px solid $gray-8;
-    box-shadow: inset 0px -20px 20px -16px $gray-1;
     transition: padding $transition-timing ease;
 
-    @media (min-width: $screen-md) {
-        margin: 2rem 4rem;
+    @media (min-width: $screen-sm) {
+        margin: 2rem 6rem;
     }
 
-    @media (min-width: $screen-lg) {
-        margin: 2rem 4rem;
+    @media (min-width: $screen-md) {
+        flex: 0.33;
+        margin: 2rem auto;
     }
 }
 
@@ -200,9 +217,17 @@ p {
 }
 
 .paragraphs {
+    height: 100%;
     padding: 0.5rem 0;
-    box-shadow: inset 0px 20px 20px -16px $gray-1;
+    border-bottom: 2px solid $gray-8;
+    box-shadow:
+        inset 0px 20px 20px -16px $gray-1,
+        inset 0px -20px 20px -16px $gray-1;
     overflow-y: scroll;
+
+    // @media (min-width: $screen-md) {
+    //     height: 50%;
+    // }
 }
 
 .paragraph + .paragraph {

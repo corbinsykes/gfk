@@ -7,7 +7,7 @@ import * as _ from 'lodash';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    selection: number = 2;
+    selection: number = 5;
     paragraphs = [];
 
     quotes = [
@@ -103,7 +103,7 @@ export class AppComponent {
     ]
 
     ngOnInit() {
-        this.buildParagraphs(2);
+        this.buildParagraphs(5);
     }
 
     buildParagraph() {
