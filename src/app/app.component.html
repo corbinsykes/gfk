@@ -2,37 +2,38 @@
 	<div class="hero">
 		<div class="overlay">
 			<div class="overlay-content">
-				<h1 class="t-caps">Lorem ipsum</h1>
-				<h1 class="t-caps">according to</h1>
-				<h1 class="t-caps">pretty toney</h1>
+				<h1 class="t-caps">pretty</h1>
+				<h1 class="t-caps">toney</h1>
+				<h1 class="t-caps">ipsum</h1>
 			</div>
 		</div>
 	</div>
 
 	<div class="ipsum">
-		<div class="actions">
+		<header class="header">
+			<div class="title">
+				<h2>Words of Wisdom</h2>
+				<h3>from Ghost Deini the Great</h3>
+			</div>
+
 			<div
-				class="dropdown"
+				class="dropdown u-pullRight"
 				dropdown>
 				<div
 					class="dropdown-toggle"
 					dropdown-open>
-			        <a>{{selection}} Paragraphs</a>
+			        <a>{{selection}} Verses</a>
 				</div>
 		        <ul class="dropdown-menu">
 		            <li
 		            	class="dropdown-item"
 		            	*ngFor=" let button of [1,2,3,4,5]; let index = index"
 						(click)="buildParagraphs(index + 1)">
-						<span>{{index + 1}} Paragraphs</span>
+						<span>{{index + 1}} Verses</span>
 					</li>
 		        </ul>
 		    </div>
-
-			<button class="button">
-				<span>Copy Text</span>
-			</button>
-		</div>
+		</header>
 
 	    <div class="paragraphs">
 			<p

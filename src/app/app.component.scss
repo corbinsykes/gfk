@@ -1,21 +1,58 @@
 @import '../styles/variables/variables';
 
-h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    color: $white;
-    font-family: 'Oswald', sans-serif;
+$screen-sm: 550px;
+$screen-md: 800px;
+$screen-lg: 1024px;
 
-    @media (min-width: 992px) {
-        font-size: 3rem;
-        line-height: 3.5rem;
+h1,
+h2,
+h3,
+p {
+    color: $gray-9;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: $white-translucent--dark;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 0.9);
+    font-weight: 800;
+    transition: all $transition-timing ease;
+
+    @media (min-width: $screen-sm) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
     }
+
+    @media (min-width: $screen-md) {
+        font-size: 4.25rem;
+        line-height: 5.25rem;
+    }
+
+    @media (min-width: $screen-lg) {
+        font-size: 4.75rem;
+        line-height: 5.75rem;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.95px;
 }
 
 p {
 	font-family: 'Lora', serif;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 1.0625rem;
+	line-height: 1.625rem;
 }
 
 .page {
@@ -23,7 +60,7 @@ p {
     flex-direction: column;
     height: 100vh;
 
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md) {
         flex-direction: row;
     }
 }
@@ -31,7 +68,6 @@ p {
 .hero,
 .ipsum {
     display: flex;
-    flex: 1;
     position: relative;
 }
 
@@ -39,6 +75,15 @@ p {
     background-image: url("https://preview.ibb.co/eU7Dh5/gfk.jpg");
     background-size: cover;
     background-position: 50% 50%;
+    flex: 0.33;
+
+    @media (min-width: $screen-sm) {
+        flex: 0.5;
+    }
+
+    @media (min-width: $screen-md) {
+        flex: 1;
+    }
 }
 
 .overlay {
@@ -54,62 +99,71 @@ p {
 .overlay-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: calc(100% - 4rem);
-    width: calc(100% - 4rem);
-    border: 2px solid $white;
+    justify-content: space-around;
+    flex-direction: row;
+    height: calc(100% - 3rem);
+    width: calc(100% - 3rem);
+    border: 3px solid $white-translucent--dark;
+
+    @media (min-width: $screen-md) {
+        flex-direction: column;
+        justify-content: center;
+        border-width: 6px;
+        height: calc(100% - 4rem);
+        width: calc(100% - 4rem);
+    }
 }
 
 
 .ipsum {
     flex-direction: column;
-    padding: 2rem;
+    flex: 1;
+    margin: 2rem;
+    border-bottom: 2px solid $gray-8;
+    box-shadow: inset 0px -20px 20px -16px $gray-1;
+    transition: padding $transition-timing ease;
 
-    @media (min-width: 992px) {
-        padding: 4rem;
+    @media (min-width: $screen-md) {
+        margin: 2rem 4rem;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin: 2rem 4rem;
     }
 }
 
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.5rem;
-    margin-left: 1rem;
-    padding: 0 1rem;
-    background-color: $blue;
-    color: $white;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    outline: 0;
-    border: 0;
-    line-height: 0;
-    cursor: pointer;
-    transition: background-color $transition-timing ease;
-
-    &:hover {
-        background-color: $dark-blue;
-    }
+.header {
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid $gray-8;
 }
 
-.actions {
+.title {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.25rem;
+    flex-direction: column;
+    float: left;
 }
 
 .dropdown {
     display: flex;
     flex-direction: column;
-    flex: 1;
     position: relative;
-    min-height: 2.5rem;
-    width: 100%;
-    margin: 1rem 0;
+    min-height: 2rem;
+    width: 7rem;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.95px;
+    color: $gray-9;
+    float: right;
 
     &.open {
+        .dropdown-menu,
+        .dropdown-toggle {
+            border-color: $gray-8;
+        }
+
         .dropdown-menu {
             display: flex;
             flex-direction: column;
@@ -121,13 +175,13 @@ p {
 .dropdown-toggle {
     display: flex;
     align-items: center;
-    height: 2.5rem;
+    height: 2rem;
     padding: 0 0.75rem;
 }
 
 .dropdown-toggle {
     justify-content: space-between;
-    border: 1px solid $gray-8;
+    border: 1px solid $gray-5;
 
     &::after {
         content: '';
@@ -142,7 +196,7 @@ p {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
     width: 100%;
     border: 1px solid $gray-8   ;
     border-top: 0;
@@ -155,6 +209,8 @@ p {
 }
 
 .paragraphs {
+    padding: 0.5rem 0;
+    box-shadow: inset 0px 20px 20px -16px $gray-1;
     overflow-y: scroll;
 }
 
